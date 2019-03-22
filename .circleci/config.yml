@@ -6,7 +6,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:9.9
+      - image: circleci/node:10.4.1
     steps:
       - checkout
 
@@ -17,7 +17,7 @@ jobs:
       #       # fallback to using the latest cache if no exact match is found
       #       - v1-dependencies-
 
-      - run:  yarn install
+      - run: yarn install
 
       - save_cache:
           paths:
